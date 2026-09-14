@@ -1,3 +1,4 @@
+/* MAIN PAGINA VANAF HIER */
 * {
     font-family: Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -108,4 +109,46 @@ footer p{
     margin-left: 160px;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+/* PROJECTEN PAGINA VANAF HIER */
+.image-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-container img{
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    outline: 4px solid rgb(125, 191, 130);
+}
+
+.projecten{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 80px 160px;
+}
+
+.project-tekst{
+    outline: 3px solid rgb(223, 223, 223);
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+.projecten-intro{
+    max-width: 550px;   
+}
+
+.project-technieken{
+    color: black;
+    font-weight: 800;
+}
+
+.project-kopje{
+    color: rgb(125, 191, 130);
 }
