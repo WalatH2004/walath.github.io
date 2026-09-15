@@ -13,7 +13,7 @@ html, body{
 body{
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* zet flex-items onder elkaar inplaats van naast elkaar*/
 }
 
 nav h1{
@@ -23,8 +23,8 @@ nav h1{
 
 .nav-bar{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* zet ruimte tussen de flex-items, waarbij het eerste item aan het begin en het laatste aan het einde staat*/
+    align-items: center; /* centreert flex-items op de andere as*/
 
     padding: 0 160px;
     border-bottom: 2px solid rgb(234, 231, 231);
@@ -33,7 +33,7 @@ nav h1{
 .nav-links{
     display: flex;
     gap: 50px;
-    list-style: none;
+    list-style: none; /* haalt de standaard bolletjes of nummers van een lijst weg.*/
     font-size: 20px;
 }
 
@@ -59,11 +59,11 @@ nav a {
 main{
     background-image: url("../img/blob-scene-haikei (1).png");
     background-size: cover;
-    flex : 1;
+    flex : 1; /* laat een flex-item de beschikbare overgebleven ruimte innemen.*/ 
 }
 
 main h1{
-    font-size:40px;
+    font-size: 40px;
     margin: 0;
     font-weight: 700;
     font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
@@ -100,8 +100,8 @@ main p{
     width: 600px;
     height: auto;
 
-    object-fit: cover;
-    object-position: center bottom;
+    object-fit: cover; /* laat een afbeelding het hele vak vullen, eventueel door stukken af te snijden*/
+    object-position: center bottom; /* bepaalt welk deel van de afbeelding zichtbaar blijft; hier vooral het midden en de onderkant*/
     margin-left: 100px;
 }
 
@@ -184,7 +184,7 @@ footer p{
 }
 
 .projecten-simulator-intro{
-    max-width: 550px;   
+    max-width: 600px;   
 }
 
 .projecten-simulator-terug{
@@ -193,9 +193,9 @@ footer p{
     background-color: white;
     padding: 15px;
     border-radius: 20px;
-    display: inline-block;
+    display: inline-block; /* laat een element tussen andere elementen staan zoals inline, maar maakt width, height, margin en padding beter toepasbaar.*/
     outline: 2px solid rgb(125, 191, 130);
-    margin-bottom: 20px;
+    transform: translateY(-50px); /* schuift een element visueel 50px omhoog zonder de rest van de layout mee te verplaatsen*/ 
 }
 
 .projecten-simulator-terug:hover{
@@ -216,10 +216,73 @@ footer p{
     flex-direction: column;
     outline: 5px solid rgb(125, 191, 130);
     border-top: 20px;
+    overflow: hidden; /* zorgt dat de afbeelding niet buiten de ronde vorm uitsteken */
+    border-radius: 20px;
 }
 
 .image-simulator-container img{
     width: 100%;
     max-width: 500px;
     height: auto;
+}
+
+/* PROJECT FRESH FRIDGE VANFA HIER */
+
+.projecten-fridge{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 160px;
+}
+
+.project-fridge-tekst{
+    outline: 3px solid rgb(196, 195, 195);
+    padding: 20px;
+    border-radius: 20px;
+    background: white;
+
+}
+
+.projecten-fridge-intro{
+    max-width: 700px;   
+}
+
+.projecten-fridge-terug{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    display: inline-block;
+    outline: 2px solid rgb(125, 191, 130);
+    transform: translateY(-50px);
+}
+
+.projecten-fridge-terug:hover{
+    background: #f0f0f0
+}
+
+.project-fridge-technieken{
+    color: black;
+    font-weight: 800;
+}
+
+.project-fridge-kopje{
+    color: rgb(125, 191, 130);
+}
+
+.image-fridge-container{
+    display: flex;
+    flex-direction: column;
+    outline: 5px solid rgb(125, 191, 130);
+    border-top: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.image-fridge-container img{
+    width: 100%;
+    max-width: 550px;
+    gap: 20px;
+    outline: 2px solid rgb(125, 191, 130);
 }
