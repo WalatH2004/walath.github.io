@@ -57,8 +57,10 @@ nav a {
 }
 
 main{
-    background-image: url("../img/blob-scene-haikei (1).png");
+    background-image: url("../img/blob-scene-haikei.svg");
     background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
     flex : 1; /* laat een flex-item de beschikbare overgebleven ruimte innemen.*/ 
 }
 
@@ -188,18 +190,16 @@ footer p{
 }
 
 .projecten-simulator-terug{
+    display: block;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+
     text-decoration: none;
     color: black;
-    background-color: white;
-    padding: 15px;
-    border-radius: 20px;
-    display: inline-block; /* laat een element tussen andere elementen staan zoals inline, maar maakt width, height, margin en padding beter toepasbaar.*/
-    outline: 2px solid rgb(125, 191, 130);
-    transform: translateY(-50px); /* schuift een element visueel 50px omhoog zonder de rest van de layout mee te verplaatsen*/ 
 }
 
 .projecten-simulator-terug:hover{
-    background: #f0f0f0
+    color: rgb(125, 191, 130);
 }
 
 .project-simulator-technieken{
@@ -248,18 +248,16 @@ footer p{
 }
 
 .projecten-fridge-terug{
+    display: block;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+
     text-decoration: none;
     color: black;
-    background-color: white;
-    padding: 15px;
-    border-radius: 20px;
-    display: inline-block;
-    outline: 2px solid rgb(125, 191, 130);
-    transform: translateY(-50px);
 }
 
 .projecten-fridge-terug:hover{
-    background: #f0f0f0
+    color: rgb(125, 191, 130)
 }
 
 .project-fridge-technieken{
@@ -285,4 +283,142 @@ footer p{
     max-width: 550px;
     gap: 20px;
     outline: 2px solid rgb(125, 191, 130);
+}
+
+/* BLOG PAGINA VANAF HIER */
+
+.blog-pagina {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 80px 160px;
+}
+
+.blog-intro {
+    max-width: 600px;
+}
+
+.blog-intro h1 {
+    color: rgb(125, 191, 130);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.blog-card {
+    background-color: white;
+    padding: 30px;
+
+    border-radius: 20px;
+    border: 3px solid rgb(125, 191, 130);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.blog-card p {
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.blog-card a {
+    display: inline-block;
+    align-self: flex-start;
+
+    margin-top: auto;
+    padding-top: 20px;
+
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.blog-card a:hover {
+    color: rgb(125, 191, 130);
+}
+
+/* BLOG - SEMANTISCHE HTML VANAF HIER */
+
+.blog-semantisch-detail {
+    padding: 30px 160px;
+}
+
+.blog-semantisch-post {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px 50px;
+    counter-reset: blog-stap;
+}
+
+.blog-semantisch-header {
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+}
+
+.blog-semantisch-header h1 {
+    font-size: 42px;
+    color: rgb(125, 191, 130);
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.blog-semantisch-header time {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.blog-semantisch-post section {
+    margin: 0;
+    counter-increment: blog-stap;
+}
+
+.blog-semantisch-post section h2::before {
+    content: counter(blog-stap, decimal-leading-zero);
+
+    display: block;
+
+    color: black;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.blog-semantisch-post h2 {
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.blog-semantisch-post p {
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 17px;
+
+    margin: 0;
+}
+
+.blog-semantisch-terug {
+    display: block;
+    max-width: 1100px;
+    margin: 0 auto 20px auto;
+
+    text-decoration: none;
+    color: black;
+}
+
+.blog-semantisch-terug:hover {
+    color: rgb(125, 191, 130);
 }
