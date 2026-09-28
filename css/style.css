@@ -125,7 +125,7 @@ footer p{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 80px 160px;
+    padding: 50px 160px;
 }
 
 .projecten-pagina h1{
@@ -136,6 +136,27 @@ footer p{
     max-width: 600px;
 }
 
+.projecten-intro p{
+    margin-bottom: 0;
+}
+
+.project-controls h3{
+    margin-top: 0;
+}
+
+.project-controls button{
+    border-radius: 5px;
+    background: white;
+    padding: 5px;
+    outline: 2px solid rgb(125, 191, 130);
+    border: none;
+    margin-left: 10px;
+}
+
+.project-controls button:hover{
+    background: #f0f0f0;
+}
+
 .project-grid{
     display: flex;
     gap: 100px;
@@ -143,7 +164,6 @@ footer p{
 
 .project-card p{
     max-width: 500px;
-    
 }
 
 .project-card img{
@@ -191,9 +211,9 @@ footer p{
 
 .projecten-simulator-terug{
     display: block;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-
+    max-width: 170px;
+    margin-bottom: 40px;
+    
     text-decoration: none;
     color: black;
 }
@@ -249,8 +269,8 @@ footer p{
 
 .projecten-fridge-terug{
     display: block;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
+    max-width: 170px;
+    margin-bottom: 40px;
 
     text-decoration: none;
     color: black;
@@ -511,6 +531,7 @@ footer p{
     margin: 32px auto;
     padding: 0 24px;
 }
+
 #contact-form input, #contact-form textarea, #contact-form button {
     width: 100%;
     min-width: 0;
@@ -518,6 +539,7 @@ footer p{
     padding: 10px;
     font: inherit;
 }
+
 #contact-form textarea {
     min-height: 160px; resize: vertical; 
 }
