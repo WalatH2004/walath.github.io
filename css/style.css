@@ -532,16 +532,51 @@ footer p{
     padding: 0 24px;
 }
 
-#contact-form input, #contact-form textarea, #contact-form button {
+#contact-form input, #contact-form textarea {
+
     width: 100%;
     min-width: 0;
     min-height: 44px;
     padding: 10px;
     font: inherit;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+
+#contact-form button{
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px;
+    font: inherit;
+    border-radius: 7px;
+    border: 2px solid black;
+    background:rgb(180, 222, 184)
+}
+
+#contact-form button:hover{
+    background: rgb(125, 191, 130);
 }
 
 #contact-form textarea {
     min-height: 160px; resize: vertical; 
+}
+
+#contact-form textarea:focus, #contact-form input:focus{
+    border-color:rgb(125, 191, 130);
+    outline: 1px solid rgb(125, 191, 130);
+}
+
+#naam-error, #email-error, #bericht-error, #form-status.error {
+    color: red;
+}
+
+#naam-error.correct, #email-error.correct, #bericht-error.correct{
+    color:rgb(125, 191, 130);
+}
+
+#form-status.success{
+    color:rgb(125, 191, 130);
 }
 
 /*MEDIA QUERIES VANAF HIER*/
