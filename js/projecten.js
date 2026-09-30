@@ -103,4 +103,5 @@ allesKnop.addEventListener("click", (filterAlleProjecten));
 javaKnop.addEventListener("click", (filterJavaProjecten));
 fullstackKnop.addEventListener("click", (filterFullstackProjecten));
 sorteerKnop.addEventListener("click", (sorteerOpProjecten));
+
 toonProjecten(projecten);
