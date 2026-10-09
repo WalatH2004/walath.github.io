@@ -3,17 +3,17 @@ const form = document.querySelector("#contact-form");
 const velden = [
     {
         id: "naam",
-        boodschap: "Vul minimaal 2 tekens in x",
+        boodschap: "Vul minimaal 2 tekens in ✕",
         correct: "Naam staat goed ✓"
     },
     {
         id: "email",
-        boodschap: "Vul een geldig emailadres in x",
+        boodschap: "Vul een geldig emailadres in ✕",
         correct: "E-mail is herkend ✓"
     },
     {
         id: "bericht",
-        boodschap: "Schrijf minimaal 10 tekens x",
+        boodschap: "Schrijf minimaal 10 tekens ✕ ",
         correct: "Correct aantal tekens ✓"
     }
 ];
@@ -48,7 +48,7 @@ form.addEventListener("submit", (event) => {
     const status = document.querySelector("#form-status");
 
     if (!alleGeldig){
-        status.textContent = "Er zijn nog fouten in het formulier!";
+        status.textContent = "Er zijn nog fouten in het formulier ✕";
         status.classList.remove("success");
         status.classList.add("error");
         return;
