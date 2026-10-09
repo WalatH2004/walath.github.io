@@ -194,7 +194,7 @@ footer p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 160px;
+    padding: 0 160px;
 }
 
 .project-simulator-tekst{
@@ -212,7 +212,8 @@ footer p{
 .projecten-simulator-terug{
     display: block;
     max-width: 170px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    margin-top: 20px;
     
     text-decoration: none;
     color: black;
@@ -252,7 +253,7 @@ footer p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 160px;
+    padding: 0 160px;
 }
 
 .project-fridge-tekst{
@@ -270,7 +271,8 @@ footer p{
 .projecten-fridge-terug{
     display: block;
     max-width: 170px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    margin-top: 20px;
 
     text-decoration: none;
     color: black;
@@ -303,6 +305,20 @@ footer p{
     max-width: 550px;
     gap: 20px;
     outline: 2px solid rgb(125, 191, 130);
+}
+
+#github-repo a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    display: inline-block;
+    outline: 3px solid rgb(125, 191, 130);
+}
+
+#github-repo a:hover{
+    background: #f0f0f0;
 }
 
 /* BLOG PAGINA VANAF HIER */
@@ -579,7 +595,18 @@ footer p{
     color:rgb(125, 191, 130);
 }
 
+#github-status.error {
+    color: red;
+}
+
 /*MEDIA QUERIES VANAF HIER*/
+
+/* Laat de teruglinks op desktop bovenaan beginnen, ongeacht de tekstlengte. */
+@media (min-width: 1024px) {
+    .projecten-simulator-intro, .projecten-fridge-intro {
+        align-self: flex-start;
+    }
+}
 
 @media (min-width: 1024px) and (max-width: 1439px) {
     .nav-bar, .hero, .projecten-pagina, .projecten-simulator,
